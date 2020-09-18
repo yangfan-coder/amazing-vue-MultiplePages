@@ -18,30 +18,13 @@ const createPage = (name, title) => {
 module.exports = {
   // 公共的路径
   publicPath: './',
-  // 输出文件目录
-  // outputDir: 'front',
-   // 关闭source map 加速生产环境的构建速度
+  // 关闭source map 加速生产环境的构建速度
   productionSourceMap:false, 
+  // 多页配置
   pages: {
     index: createPage('index', '首页'),
     admin: createPage('admin', '关于我们')
   },
-  // 多页配置
-  // pages: {
-  //   admin: {
-  //     // 应用入口配置，相当于单页面应用的main.js，必需项
-  //     entry: 'src/pages/admin/main.js',
-  //     // 应用的模版，相当于单页面应用的public/index.html，可选项，省略时默认与模块名一致
-  //     template: 'public/admin.html',
-  //     // 编译后在dist目录的输出文件名，可选项，省略时默认与模块名一致
-  //     filename: 'admin.html'
-  //   },
-  //   index: {
-  //     entry: 'src/pages/index/main.js',
-  //     template: 'public/index.html',
-  //     filename: 'index.html'
-  //   }
-  // },
   // 代理配置
   devServer:{
     open: true, // 配置自动启动浏览器
